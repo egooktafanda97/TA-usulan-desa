@@ -198,6 +198,7 @@
         const getUsulanByID = async (id) => {
             const response = await axios.get(`<?= base_url("Usulan/getUsulanByID/") ?>${id}`);
             if (response?.status ?? 400 == 200) {
+                $("[name='prioritas']").val(response.data.prioritas);
                 $("[name='permasalahan']").summernote("code", response.data.masalah);
             }
         }
