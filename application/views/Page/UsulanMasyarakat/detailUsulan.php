@@ -32,6 +32,12 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cards" style="padding: 10px; margin-bottom: 10px;">
+                            <label style="color:#000;">PRIORITAS</label>
+                            <p><?= $usulan['prioritas'] ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="cards" style="padding: 10px; margin-bottom: 10px;">
                             <label style="color:#000;">Usulan</label>
                             <p><?= $usulan['usulan_masyarakat'] ?></p>
                         </div>

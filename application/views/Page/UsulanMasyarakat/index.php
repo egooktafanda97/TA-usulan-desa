@@ -89,11 +89,12 @@
                 <input type="hidden" name="id_usulan_masyarakat" value="">
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">PRIORITAS</label>
-                                <input type="text" name="prioritas" class="form-control form-control-sm" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="">PRIORITAS</label>
+                            <select name="prioritas" class="form-control" require>
+                                <option value="">PILIH PRIORITAS</option>
+                                <option value="INFRASTRUKTUR">INFRASTRUKTUR</option>
+                            </select>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
