@@ -56,7 +56,7 @@
 <?php if (!empty($this->session->flashdata("success"))) : ?>
     <script>
         swal({
-            title: "Good job!",
+            title: "Success",
             text: "<?= $this->session->flashdata("success") ?>",
             icon: "success",
             button: "ok",
