@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Ollie landing page.">
     <meta name="author" content="Devcrud">
-    <title>Musrembang</title>
+    <title>Musrenbang</title>
 
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
@@ -67,7 +67,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 class="carousel-title">Musrembang<br> Usulan Masyarakat</h1>
+                            <h1 class="carousel-title">Musrenbang<br> Usulan Masyarakat</h1>
                             <?php if (!empty($this->session->userdata()['user']) && $this->session->userdata()['user']->role == "MASYARAKAT") : ?>
                                 <a class="btn btn-primary btn-rounded" href="<?= base_url("welcome/usulan") ?>">Buat Usulan</a>
                             <?php else : ?>
@@ -89,9 +89,9 @@
 
             <div class="row ">
                 <div class="col-md-12">
-                    <h6 class="xs-font mb-0">Musrembang</h6>
+                    <h6 class="xs-font mb-0">Musrenbang</h6>
                     <h3 class="section-title">TENTANG</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quo reiciendis maxime adipisci optio? Quas possimus, incidunt magnam animi fugit nobis iusto, quam dolorem facilis ut cum aspernatur, enim molestias.</p>
+                    <p>Selamat Datang Di Aplikasi E-Musrenbang. E-Musrenbang adalah sistem informasi perencanaan berbasis website yang dibangun untuk menselaraskan Aspirasi dan ide antara masyarakat, komunitas, Gampong /Desa, kecamatan, SKPK, DPRK dengan pemerintah dalam penyusunan Rencana pembangunan Pemerintah daerah secara efektif dan efisien serta transparan.</p>
                 </div>
                 <div class="col-sm-8 col-md-8">
 

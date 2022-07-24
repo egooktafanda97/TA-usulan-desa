@@ -39,7 +39,7 @@
         <div class="card-body-main">
 
             <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;border-bottom: 2px solid gray;">
-                <h4>Usulan Dikirm Ke Bapeda</h4>
+                <h4>Usulan Ditolak</h4>
                 <!-- <button type="button" class="btn btn-primary btn-send-kec" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-paper-plane"></i> Kirim Ke Bapeda Kabupaten</button> -->
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -49,7 +49,7 @@
                         <strong style="white-space: nowrap;">Pilih Tahun : </strong>
                         <div style="display: flex;">
                             <select name="tahun" class="form-control form-control-sm" style="margin-right: 10px;">
-                                <option value="">Pilih Desa</option>
+                                <option value="">Pilih Tahun</option>
                                 <?php
                                 $tahun = date('Y');
                                 for ($i = $tahun; $i >= $tahun - 10; $i--) {

@@ -117,7 +117,7 @@
                     <div style="width: 100%; display: flex; justify-content: flex-end;">
                         <div style="margin-right: 30px;">
                             <div>Kuantan Singingi, <?= tgl_i(date("Y-m-d")) ?></div>
-                            <strong>Kepala Dinas BAPEDA</strong>
+                            <strong>Kepala Dinas BAPPEDA</strong>
                             <br />
                             <br />
                             <br />

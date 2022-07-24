@@ -1,7 +1,7 @@
      <div class="col-md-3 left_col">
        <div class="left_col scroll-view">
          <div class="navbar nav_title" style="border: 0;">
-           <a href="index.html" class="site_title"><span>MUSREMBANG</span></a>
+           <a href="index.html" class="site_title"><span>MUSRENBANG</span></a>
          </div>
 
          <div class="clearfix"></div>
@@ -81,12 +81,12 @@
                  </li>
                  <li>
                    <a href="<?= base_url("Usulan/usulan_diterima_bapeda") ?>">
-                     <i class="fa fa-folder"></i> Usulan Diterima Bapeda
+                     <i class="fa fa-folder"></i> Usulan Diterima Bappeda
                    </a>
                  </li>
                  <li>
                    <a href="<?= base_url("Usulan/usulan_ditlak_bapeda") ?>">
-                     <i class="fa fa-folder"></i> Usulan Ditolak Bapeda
+                     <i class="fa fa-folder"></i> Usulan Ditolak Bappeda
                    </a>
                  </li>
                <?php endif ?>
@@ -103,7 +103,7 @@
                  </li>
                  <li>
                    <a href="<?= base_url("MUser/account_people_block") ?>">
-                     <i class="fa fa-user"></i> Akun Masyarakat Di Blikir
+                     <i class="fa fa-user"></i> Akun Masyarakat Di Blokir
                    </a>
                  </li>
                  <li>

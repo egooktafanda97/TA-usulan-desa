@@ -52,7 +52,7 @@
                         <strong style="white-space: nowrap;">Pilih Kecamatan : </strong>
                         <div style="display: flex;">
                             <select name="kecamatan" class="form-control form-control-sm" style="margin-right: 10px;">
-                                <option value="">Pilih Desa</option>
+                                <option value="">Pilih Kecamatan</option>
                                 <?php foreach ($kecamatan as $d) : ?>
                                     <option value="<?= $d['kode_kecamatan'] ?>"><?= $d['nama_kecamatan'] ?></option>
                                 <?php endforeach; ?>

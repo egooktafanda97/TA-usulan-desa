@@ -197,7 +197,7 @@
                                 <label for="">USULAN TAHUN</label>
                                 <!-- select tahun -->
                                 <select name="tahun_usulan" class="form-control form-control-sm" required>
-                                    <?php for ($i = date("Y"); $i >= date("Y") - 5; $i--) : ?>
+                                    <?php for ($i = 2025; $i >= date("Y") - 5; $i--) : ?>
                                         <option value="<?= $i ?>"><?= $i ?></option>
                                     <?php endfor ?>
                                 </select>
@@ -206,7 +206,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Kirim</button>
                     </div>
                 </div>
             </form>

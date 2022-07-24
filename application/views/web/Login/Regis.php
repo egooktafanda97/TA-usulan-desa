@@ -108,7 +108,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group text-right">
-                                <button type="submit" class="btn btn-secondary btn-sm" style="width: 150px;"><span>Kembali Login</span></button>
+                                <a href="<?=base_url("welcome/login/")?>" class="btn btn-secondary btn-sm" style="width: 150px;"><span>Kembali Login</span></a>
                                 <button type="submit" class="btn btn-primary btn-sm" style="width: 150px;"><span>Ajukan Pendaftar</span></button>
                             </div>
                         </div>

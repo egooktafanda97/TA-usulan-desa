@@ -2,6 +2,9 @@
 function getUserLogin()
 {
   $ci = &get_instance();
+  if(empty($ci->session->userdata()['user']->role)){
+    redirect("Login");
+  }
   if ($ci->session->userdata()['user']->role == "DESA") {
     $ci->db->select("*,desa.nama_kepala_desa as nama");
     $ci->db->join("desa", "desa.id_user = user.id_user");
@@ -30,7 +33,7 @@ function getUserLogin()
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Musrebang </title>
+  <title>Musrenbang </title>
 
   <!-- Bootstrap -->
   <link href="<?= base_url('assets/admin/'); ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">

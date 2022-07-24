@@ -49,7 +49,7 @@
                         <strong style="white-space: nowrap;">Pilih Tahun : </strong>
                         <div style="display: flex;">
                             <select name="tahun" class="form-control form-control-sm" style="margin-right: 10px;">
-                                <option value="">Pilih Desa</option>
+                                <option value="">Pilih Tahun</option>
                                 <?php
                                 $tahun = date('Y');
                                 for ($i = $tahun; $i >= $tahun - 10; $i--) {
@@ -78,7 +78,7 @@
                                 <option value="">PILIH STATUS</option>
                                 <option value="send-kecamatan">Usulan belum diproses</option>
                                 <option value="tolak-kecamatan">Usulan ditolak</option>
-                                <option value="send-bapeda">Usulan dikirim ke bapeda</option>
+                                <option value="send-bapeda">Usulan diterima</option>
                             </select>
                             <button type="submit" class="btn btn-info btn-sm" style="margin-left: 10px; margin-bottom: 0px; ">Cari</button>
                         </div>

@@ -73,7 +73,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1 class="carousel-title">Musrembang<br> Usulan Masyarakat</h1>
+                            <h1 class="carousel-title">Musrenbang<br> Usulan Masyarakat</h1>
                         </div>
                     </div>
                 </div>

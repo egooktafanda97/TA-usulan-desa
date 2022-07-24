@@ -30,7 +30,7 @@ class Login extends CI_Controller
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $cek = $this->db->get_where('user', ["username" => $username, "password" => md5($password)])->num_rows();
+        $cek = $this->db->get_where('user', ["username" => $username, "password" => md5($password),"status"=>"active"])->num_rows();
         if ($cek > 0 && $this->db->get_where('user', ["username" => $username, "password" => md5($password)])->row()->role == "MASYARAKAT") {
             $us = $this->db->get_where('user', ["username" => $username, "password" => md5($password)])->row();
             $data_session = array(
@@ -42,7 +42,7 @@ class Login extends CI_Controller
             $this->session->set_userdata($data_session);
             redirect(base_url("welcome"));
         } else {
-            $this->session->set_flashdata("error", "Username atau Password Salah");
+            $this->session->set_flashdata("error", "Username atau Password Salah / anda belum di verifikasi");
             redirect(base_url("welcome/login"));
         }
     }

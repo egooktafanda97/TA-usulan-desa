@@ -19,16 +19,31 @@ class MUser extends CI_Controller
     }
     public function user_desa()
     {
+        $auth = $this->getUserLogin()['kode_kecamatan'];
         $this->db->join("desa", "desa.id_user = user.id_user");
         $this->db->join("kecamatan", "kecamatan.kode_kecamatan = desa.id_kecamatan");
+        $this->db->where("desa.id_kecamatan", $auth);
         $dataUsdesa = $this->db->get_where("user")->result_array();
-
+     
         $data = [
             "path" => "Desa/index",
             "script" => "Desa/script",
             "data_desa" => $dataUsdesa
         ];
         $this->load->view('Router/route', $data);
+    }
+    public function getUserLogin()
+    {
+        if ($this->session->userdata()['user']->role == "DESA") {
+            $this->db->join("desa", "desa.id_user = user.id_user");
+        } else if ($this->session->userdata()['user']->role == "KECAMATAN") {
+            $this->db->join("kecamatan", "kecamatan.id_user = user.id_user");
+        } else if ($this->session->userdata()['user']->role == "MASYARAKAT") {
+            $this->db->join("masyarakat_pengusul", "masyarakat_pengusul.id_user = user.id_user");
+        }
+        $this->db->where("user.id_user", $this->session->userdata()['user']->id_user);
+        $u = $this->db->get('user')->row_array();
+        return $u;
     }
     public function user_masyarakat()
     {
