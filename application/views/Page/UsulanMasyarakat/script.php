@@ -202,5 +202,20 @@
             }
         }
         getUsulanByID(id);
+    });
+    $(".deletes").click(function() {
+        var id = $(this).data("id");
+        swal({
+                title: "Yakin?",
+                text: "data akan di hapus",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location.href = "<?= base_url("Usulan/deleteUsulanMasyarakat/") ?>" + id
+                }
+            });
     })
 </script>

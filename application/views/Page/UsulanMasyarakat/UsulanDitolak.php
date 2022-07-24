@@ -58,9 +58,6 @@
                                 </a>
                             </td>
                             <td class="text-center">
-                                <button class="btn btn-success btn-sm proses" data-id="<?= $value["id_usulan_masyarakat"] ?>" data-toggle="modal" data-target=".bs-example-modal-lg">
-                                    Proses
-                                </button>
                                 <button class="btn btn-danger btn-sm deletes" data-id="<?= $value["id_usulan_masyarakat"] ?>">
                                     Hapus
                                 </button>
@@ -69,88 +66,6 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div style="width: 100%;display: flex; justify-content: space-between; align-content: center;">
-                    <h4 class="modal-title" id="myModalLabel">Panel Input</h4>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-            </div>
-            <form action="<?= base_url("Usulan/terima_usulan") ?>" method="post" novalidate enctype="multipart/form-data">
-                <input type="hidden" name="id_usulan_masyarakat" value="">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">PRIORITAS</label>
-                                <input type="text" name="prioritas" class="form-control form-control-sm" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">ARAH KEBIJAKAN</label>
-                                <textarea name="arah_kebijakan" class="form-control form-control-sm summernote" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">KAMUS USULAN</label>
-                                <textarea name="kamus_usulan" class="form-control form-control-sm summernote" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="">PERMASALAHAN</label>
-                                <textarea name="permasalahan" class="form-control form-control-sm summernote" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">VOLUME</label>
-                                <input type="text" name="volume" class="form-control form-control-sm" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">LOKASI</label>
-                                <input type="text" name="lokasi" class="form-control form-control-sm" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="">FOTO LOKASI</label>
-                                <input type="file" name="foto_lokasi" class="form-control form-control-sm" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        DOKUMEN SEBELUM NYA DARI MASYARAKAT?
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 docPen">
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 </div>
