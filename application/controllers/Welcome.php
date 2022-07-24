@@ -27,6 +27,7 @@ class Welcome extends CI_Controller
 	{
 		$this->db->join("user", "user.id_user = kecamatan.id_user");
 		$dataUsKecamatan = $this->db->get_where("kecamatan")->result_array();
+		
 		$data = [
 			"page" => "Login/Regis",
 			"kecamatan" => $dataUsKecamatan,
