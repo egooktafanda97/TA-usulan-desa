@@ -36,6 +36,7 @@
                         <th>Alamat</th>
                         <th>Dusun</th>
                         <th>RT/RW</th>
+                        <th>KTP</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -49,6 +50,9 @@
                             <td><?= $value['alamat_lengap'] ?></td>
                             <td><?= $value['dusun'] ?></td>
                             <td><?= $value['rt_rw'] ?></td>
+                            <td>
+                                <button class="btn btn-primary btn-sm show-ktp" data-foto="<?= $value['foto_ktp'] ?>" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-eye"></i> Lihat KTP</button>
+                            </td>
 
                             <td class="text-center">
                                 <button class="btn btn-success btn-sm validasi" data-id="<?= $value['id_user'] ?>">
@@ -62,6 +66,17 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="cards" id="viewKtp"></div>
         </div>
     </div>
 </div>

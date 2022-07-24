@@ -106,9 +106,15 @@
                                 <input type="file" name="foto" class="form-control form-control-sm" required>
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="username-field">Foto Ktp</label><br>
+                                <input type="file" name="ktp" class="form-control form-control-sm" required>
+                            </div>
+                        </div>
                         <div class="col-md-12">
                             <div class="form-group text-right">
-                                <a href="<?=base_url("welcome/login/")?>" class="btn btn-secondary btn-sm" style="width: 150px;"><span>Kembali Login</span></a>
+                                <a href="<?= base_url("welcome/login/") ?>" class="btn btn-secondary btn-sm" style="width: 150px;"><span>Kembali Login</span></a>
                                 <button type="submit" class="btn btn-primary btn-sm" style="width: 150px;"><span>Ajukan Pendaftar</span></button>
                             </div>
                         </div>

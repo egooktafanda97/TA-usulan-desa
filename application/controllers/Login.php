@@ -30,7 +30,7 @@ class Login extends CI_Controller
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $cek = $this->db->get_where('user', ["username" => $username, "password" => md5($password),"status"=>"active"])->num_rows();
+        $cek = $this->db->get_where('user', ["username" => $username, "password" => md5($password), "status" => "active"])->num_rows();
         if ($cek > 0 && $this->db->get_where('user', ["username" => $username, "password" => md5($password)])->row()->role == "MASYARAKAT") {
             $us = $this->db->get_where('user', ["username" => $username, "password" => md5($password)])->row();
             $data_session = array(
@@ -63,13 +63,14 @@ class Login extends CI_Controller
     public function registration()
     {
         $up = up("foto", "assets/img/user/");
+        $ktp = up("ktp", "assets/img/user/");
         $data = $_POST;
         $user = [
             "username" => $data['username'],
             "password" => md5($data['password']),
             "role"     => "MASYARAKAT",
             "status"   => "request",
-            "foto"     => $up ? $up : "default.jpg",
+            "foto"     => !$up ? "default.jpg" : $up,
         ];
 
         if ($this->db->get_where("user", ["username" => $data['username']])->num_rows() > 0) {
@@ -86,7 +87,8 @@ class Login extends CI_Controller
             "nama_pengusul" => $data['nama_pengusul'],
             "dusun" => $data['dusun'],
             "rt_rw" => $data['rt_rw'],
-            "alamat_lengap" => $data['alamat_lengap']
+            "alamat_lengap" => $data['alamat_lengap'],
+            "foto_ktp" => !$ktp ? null : $ktp,
         ];
         $res = $this->db->insert("masyarakat_pengusul", $data);
         if ($res) {

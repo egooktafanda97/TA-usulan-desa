@@ -100,6 +100,12 @@
 </script>
 
 <script>
+    $(".show-ktp").click(function() {
+        $("#viewKtp").html(
+            '<img src="<?= base_url("assets/img/user/") ?>' + $(this).data("foto") + '" width="100%" alt="">'
+        );
+    })
+
     $(".btn-edit").click(function() {
         const item = $(this).data("unit");
         if (item != undefined) {
