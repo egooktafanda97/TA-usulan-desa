@@ -107,6 +107,15 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
+                                        <label for="">PRIORITAS</label>
+                                        <select name="prioritas" class="form-control" require>
+                                            <option value="">PILIH PRIORITAS</option>
+                                            <option value="INFRASTRUKTUR">INFRASTRUKTUR</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
                                         <label for="">USULAN</label>
                                         <textarea style="height: 300px;" class="summernote" name="usulan_masyarakat" required="required" data-msg="Please write something :)"></textarea>
                                     </div>
@@ -203,7 +212,7 @@
     <?php if (!empty($this->session->flashdata("success"))) : ?>
         <script>
             swal({
-                title: "Good job!",
+                title: "Success",
                 text: "<?= $this->session->flashdata("success") ?>",
                 icon: "success",
                 button: "ok",

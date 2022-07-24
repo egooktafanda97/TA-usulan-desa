@@ -66,6 +66,7 @@ class Welcome extends CI_Controller
 				"kode_desa" => $getM['kode_desa'],
 				"id_masyarakat" => $getM['id_pengusul'],
 				"usulan_masyarakat" => $data['usulan_masyarakat'],
+				"prioritas" => $data['prioritas'],
 				"masalah" => $data['masalah'],
 				"lokasi" => $data['lokasi'],
 				"documet" => $doc != false ? $doc : null,
