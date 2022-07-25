@@ -111,19 +111,19 @@
                                         <select name="prioritas" class="form-control" require>
                                             <option value="">PILIH PRIORITAS</option>
                                             <option value="INFRASTRUKTUR">INFRASTRUKTUR</option>
-                                             <option value="KETERTIBAN UMUM">KETERTIBAN UMUM</option>
-                                    <option value="SOSIAL">SOSIAL</option>
-                                    <option value="BUDAYA">BUDAYA</option>
-                                    <option value="EKONOMI">EKONOMI</option>
-                                    <option value="HUKUM">HUKUM</option>
-                                    <option value="POLITIK">POLITIK</option>
-                                    <option value="KEAGAMAAN">KEAGAMAAN</option>
-                                    <option value="TATA KELOLA PEMERINTAHAN DESA">TATA KELOLA PEMERINTAHAN DESA</option>
-                                    <option value="PROGRAM DESA">PROGRAM DESA</option>
-                                    <option value="RPJM DESA">RPJM DESA</option>
-                                    <option value="PELAYANAN PUBLIK DESA">PELAYANAN PUBLIK DESA</option>
-                                    <option value="BUMDES">BUMDES</option>
-                                    <option value="TRANSPARANSI ALOKASI DANA DESA">TRANSPARANSI ALOKASI DANA DESA</option>
+                                            <option value="KETERTIBAN UMUM">KETERTIBAN UMUM</option>
+                                            <option value="SOSIAL">SOSIAL</option>
+                                            <option value="BUDAYA">BUDAYA</option>
+                                            <option value="EKONOMI">EKONOMI</option>
+                                            <option value="HUKUM">HUKUM</option>
+                                            <option value="POLITIK">POLITIK</option>
+                                            <option value="KEAGAMAAN">KEAGAMAAN</option>
+                                            <option value="TATA KELOLA PEMERINTAHAN DESA">TATA KELOLA PEMERINTAHAN DESA</option>
+                                            <option value="PROGRAM DESA">PROGRAM DESA</option>
+                                            <option value="RPJM DESA">RPJM DESA</option>
+                                            <option value="PELAYANAN PUBLIK DESA">PELAYANAN PUBLIK DESA</option>
+                                            <option value="BUMDES">BUMDES</option>
+                                            <option value="TRANSPARANSI ALOKASI DANA DESA">TRANSPARANSI ALOKASI DANA DESA</option>
                                         </select>
                                     </div>
                                 </div>
