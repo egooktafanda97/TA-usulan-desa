@@ -36,7 +36,8 @@ class Bapeda extends CI_Controller
             "path" => "Bapeda/UsulanBaru",
             "script" => "Bapeda/script",
             "usulan" => $u,
-            "kecamatan" => $kecamatan
+            "kecamatan" => $kecamatan,
+            "desa"    => $desa
         ];
         $this->load->view('Router/route', $data);
     }
@@ -61,7 +62,8 @@ class Bapeda extends CI_Controller
             "path" => "Bapeda/UsulanDiterima",
             "script" => "Bapeda/script",
             "usulan" => $u,
-            "kecamatan" => $kecamatan
+            "kecamatan" => $kecamatan,
+            "desa"    => $desa
         ];
         $this->load->view('Router/route', $data);
     }
@@ -87,7 +89,8 @@ class Bapeda extends CI_Controller
             "script" => "Bapeda/script",
             "usulan" => $u,
             "kecamatan" => $kecamatan,
-            "user"  => $this->getUser()
+            "user"  => $this->getUser(),
+            "desa"    => $desa
         ];
         $this->load->view('Page/Bapeda/print', $data);
     }
@@ -132,7 +135,8 @@ class Bapeda extends CI_Controller
             "path" => "Bapeda/UsulanDitolak",
             "script" => "Bapeda/script",
             "usulan" => $u,
-            "kecamatan" => $kecamatan
+            "kecamatan" => $kecamatan,
+            "desa"    => $desa
         ];
         $this->load->view('Router/route', $data);
     }

@@ -59,7 +59,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <strong style="white-space: nowrap;">Pilih Desa : </strong>
                         <div style="display: flex;">
                             <select name="desa" class="form-control form-control-sm" style="margin-right: 10px;">
@@ -69,9 +69,33 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
+                    </div> -->
+
+                    <div class="form-group">
+                        <strong style="white-space: nowrap;">Pilih Kecamatan : </strong>
+                        <div style="display: flex;">
+                            <select name="kecamatan" class="form-control form-control-sm" style="margin-right: 10px;">
+                                <option value="">Pilih Kecamatan</option>
+                                <?php foreach ($kecamatan as $d) : ?>
+                                    <option value="<?= $d['kode_kecamatan'] ?>"><?= $d['nama_kecamatan'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
+                        <strong style="white-space: nowrap;">Pilih Desa : </strong>
+                        <div style="display: flex;">
+                            <select name="desa" class="form-control form-control-sm" style="margin-right: 10px;">
+                                <option value="">Pilih Kecamatan Terlebih dahulu</option>
+                                <?php foreach ($desa as $d) : ?>
+                                    <option value="<?= $d['kode_desa'] ?>"><?= $d['nama_desa'] ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <button type="submit" class="btn btn-info btn-sm" style="margin-left: 10px; margin-bottom: 0px; ">Cari</button>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
                         <strong style="white-space: nowrap;">Status Usulan : </strong>
                         <div style="display: flex;">
                             <select name="status" class="form-control form-control-sm">
@@ -82,7 +106,7 @@
                             </select>
                             <button type="submit" class="btn btn-info btn-sm" style="margin-left: 10px; margin-bottom: 0px; ">Cari</button>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
