@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <strong style="white-space: nowrap;">Pilih Desa : </strong>
                         <div style="display: flex;">
                             <select name="desa" class="form-control form-control-sm" style="margin-right: 10px;">
@@ -68,7 +68,7 @@
                             </select>
                             <button type="submit" class="btn btn-info btn-sm" style="margin-left: 10px; margin-bottom: 0px; ">Cari</button>
                         </div>
-                    </div>
+                    </div> -->
                 </form>
             </div>
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
