@@ -85,9 +85,9 @@
                                     <option value="">PILIH STATUS</option>
                                     <option value="send-kecamatan">Usulan belum diproses</option>
                                     <option value="tolak-kecamatan">Usulan ditolak</option>
-                                    <option value="send-bapeda">Usulan dikirim ke bapeda</option>
-                                    <option value="accept-bapeda">Usulan diterima bapeda</option>
-                                    <option value="reject-bapeda">Usulan ditolak bapeda</option>
+                                    <!-- <option value="send-bapeda">Usulan dikirim ke bapeda</option> -->
+                                    <!-- <option value="accept-bapeda">Usulan diterima bapeda</option>
+                                    <option value="reject-bapeda">Usulan ditolak bapeda</option> -->
                                 </select>
                                 <button class="btn btn-info btn-sm" style="margin: 0; margin-left: 10px;">Cari</button>
                             </div>

@@ -39,7 +39,7 @@
         <div class="card-body-main">
 
             <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;border-bottom: 2px solid gray;">
-                <h4>Usulan Dikirm Ke Bapeda</h4>
+                <h4>usulan Diterima</h4>
                 <!-- <button type="button" class="btn btn-primary btn-send-kec" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-paper-plane"></i> Kirim Ke Bapeda Kabupaten</button> -->
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -105,7 +105,7 @@
                                 </a>
                             </td>
                             <td>
-                                <?= $value['status_kirim'] == "send-bapeda" ? "MENUNGGU RESPON BAPEDA" : $value['status_kirim'] ?>
+                                <?= $value['status_kirim'] == "send-bapeda" ? "USULAN DITERIMA" : $value['status_kirim'] ?>
                             </td>
                             <td class="text-center">
                                 <a href="<?= base_url("usulan/detailUsulan/" . $value['id_usulan']) ?>" class="btn btn-primary btn-sm edits">

@@ -40,7 +40,7 @@
 
             <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;border-bottom: 2px solid gray;">
                 <h4>Usulan Desa Belum Diproses</h4>
-                <button type="button" class="btn btn-primary btn-send-kec"><i class="fa fa-paper-plane"></i> Kirim Ke Bapeda Kabupaten</button>
+                <button type="button" class="btn btn-primary btn-send-kec"><i class="fa fa-paper-plane"></i> Terima Usulan</button>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div></div>

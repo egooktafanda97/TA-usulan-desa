@@ -79,7 +79,7 @@
                      <i class="fa fa-folder"></i> Semua Usulan
                    </a>
                  </li>
-                 <li>
+                 <!-- <li>
                    <a href="<?= base_url("Usulan/usulan_diterima_bapeda") ?>">
                      <i class="fa fa-folder"></i> Usulan Diterima Bappeda
                    </a>
@@ -88,7 +88,7 @@
                    <a href="<?= base_url("Usulan/usulan_ditlak_bapeda") ?>">
                      <i class="fa fa-folder"></i> Usulan Ditolak Bappeda
                    </a>
-                 </li>
+                 </li> -->
                <?php endif ?>
                <?php if ($this->session->userdata()['user']->role == "DESA") : ?>
                  <li>

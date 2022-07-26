@@ -101,7 +101,7 @@
     $(".btn-send-kec").click(function() {
         swal({
             title: "Yakin?",
-            text: "Akan mengirimkan data ke Bapeda?",
+            text: "Usulan Diterima?",
             icon: "warning",
             buttons: true,
             dangerMode: true,
@@ -120,8 +120,8 @@
                     const response = await axios.post(`<?= base_url("Usulan/sendBapeda/") ?>`, form_data);
                     if (response?.status ?? 400 == 200) {
                         swal({
-                            title: "Good job!",
-                            text: "Data berhasil dikirim ke Bapeda",
+                            title: "Success!",
+                            text: "Usulan Berhasil Diterima",
                             icon: "success",
                             button: "ok",
                         }).then((willDelete) => {
