@@ -55,7 +55,7 @@
                                     <!-- for tahun by array -->
                                     <?php
                                     $tahun = date('Y');
-                                    for ($i = $tahun; $i >= $tahun - 10; $i--) {
+                                    for ($i = 2025; $i >= $tahun - 10; $i--) {
                                     ?>
                                         <option value="<?= $i ?>"><?= $i ?></option>
                                     <?php } ?>

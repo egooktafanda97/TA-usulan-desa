@@ -51,7 +51,7 @@
                             <select name="tahun" class="form-control form-control-sm" style="margin-right: 10px;">
                                 <option value="">Pilih Desa</option>
                                 <?php
-                                $tahun = date('Y');
+                                $tahun =  2025;
                                 for ($i = $tahun; $i >= $tahun - 10; $i--) {
                                 ?>
                                     <option value="<?= $i ?>"><?= $i ?></option>
