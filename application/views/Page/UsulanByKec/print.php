@@ -101,7 +101,7 @@
                             </a>
                         </td>
                         <td><?=
-                            $value['status_kirim'] == "proses" ? "PREVIEW" : ($value['status_kirim'] == "send-kecamatan" ? "USULAN MASUK BELUM DI TANGGAPI" : ($value['status_kirim'] == "send-bapeda" ? "TERKIRIM KE BAPEDA" : ($value['status_kirim'] == "tolak-kecamatan" ? "TOLAK KECAMATAN" : ($value['status_kirim'] == "hapus-kecamatan" ? "TOLAK KECAMATAN" : $value['status_kirim']
+                            $value['status_kirim'] == "proses" ? "PREVIEW" : ($value['status_kirim'] == "send-kecamatan" ? "USULAN MASUK BELUM DI TANGGAPI" : ($value['status_kirim'] == "send-bapeda" ? "TERKIRIM DITERIMA" : ($value['status_kirim'] == "tolak-kecamatan" ? "TOLAK KECAMATAN" : ($value['status_kirim'] == "hapus-kecamatan" ? "TOLAK KECAMATAN" : $value['status_kirim']
                             )))) ?></td>
 
                     </tr>
