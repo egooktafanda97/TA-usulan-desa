@@ -42,37 +42,57 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label> Nik</label><br>
+                                <label> Nik</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="nik" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Nama</label><br>
+                                <label for="username-field"> Nama</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="nama_pengusul" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Alamat</label><br>
+                                <label for="username-field"> Alamat</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="alamat_lengap" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Username</label><br>
+                                <label for="username-field">Tanggal Lahir</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
+                                <input type="date" name="tgl_lahir" class="form-control form-control-sm" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="username-field"> Username</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="username" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="password-field">Password</label><br>
+                                <label for="password-field">Password</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="password" name="password" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Kecamatan</label><br>
+                                <label for="username-field"> Kecamatan</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <select name="kecamatan" class="form-control form-control-sm">
                                     <?php foreach ($kecamatan as  $value) : ?>
                                         <option value="<?= $value['kode_kecamatan'] ?>"><?= $value['nama_kecamatan'] ?></option>
@@ -82,7 +102,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Desa</label><br>
+                                <label for="username-field"> Desa</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <select name="desa" class="form-control form-control-sm">
                                     <option value="">PILIH KECAMATAN DULU</option>
                                 </select>
@@ -90,25 +112,26 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> Dusun</label><br>
+                                <label for="username-field"> Dusun</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="dusun" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field"> RT/RW</label><br>
+                                <label for="username-field"> RT/RW</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="rt_rw" class="form-control form-control-sm" required>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field">Foto</label><br>
-                                <input type="file" name="foto" class="form-control form-control-sm" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="username-field">Foto Ktp</label><br>
+                                <label for="username-field">Foto Ktp</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="file" name="ktp" class="form-control form-control-sm" required>
                             </div>
                         </div>

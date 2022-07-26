@@ -62,7 +62,7 @@ class Login extends CI_Controller
     }
     public function registration()
     {
-        $up = up("foto", "assets/img/user/");
+        // $up = up("foto", "assets/img/user/");
         $ktp = up("ktp", "assets/img/user/");
         $data = $_POST;
         $user = [
@@ -70,12 +70,12 @@ class Login extends CI_Controller
             "password" => md5($data['password']),
             "role"     => "MASYARAKAT",
             "status"   => "request",
-            "foto"     => !$up ? "default.jpg" : $up,
+            "foto"     => "default.jpg",
         ];
 
         if ($this->db->get_where("user", ["username" => $data['username']])->num_rows() > 0) {
             $this->session->set_flashdata("error", "Username sudah ada");
-            redirect(base_url("MUser/user_desa"));
+            redirect(base_url("welcome/regis/"));
             return;
         }
         $this->db->insert("user", $user);
@@ -87,6 +87,7 @@ class Login extends CI_Controller
             "nama_pengusul" => $data['nama_pengusul'],
             "dusun" => $data['dusun'],
             "rt_rw" => $data['rt_rw'],
+            "tgl_lahir" => $data['tgl_lahir'],
             "alamat_lengap" => $data['alamat_lengap'],
             "foto_ktp" => !$ktp ? null : $ktp,
         ];
