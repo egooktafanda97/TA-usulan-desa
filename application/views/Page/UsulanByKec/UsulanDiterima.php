@@ -78,7 +78,7 @@
                                 <option value="">PILIH STATUS</option>
                                 <option value="send-kecamatan">Usulan belum diproses</option>
                                 <option value="tolak-kecamatan">Usulan ditolak</option>
-                                <option value="send-bapeda">Usulan dikirim ke bapeda</option>
+                                <option value="send-bapeda">Usulan diterima</option>
                             </select>
                             <button type="submit" class="btn btn-info btn-sm" style="margin-left: 10px; margin-bottom: 0px; ">Cari</button>
                         </div>
@@ -141,7 +141,7 @@
                                     } else if ($value['status_kirim'] == "tolak-kecamatan") {
                                         echo "TOLAK KECAMATAN";
                                     } else if ($value['status_kirim'] == "accept-bapeda") {
-                                        echo "USULAN DI TERIMA BA PEDA";
+                                        echo "USULAN DITERIMA";
                                     } else if ($value['status_kirim'] == "reject-bapeda") {
                                         echo "USULAN DI TOLAK BAPEDA";
                                     }

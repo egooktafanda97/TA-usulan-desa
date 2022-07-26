@@ -66,7 +66,7 @@
                  </li>
                  <li>
                    <a href="<?= base_url("Usulan/detailUsulanDesaDikirimKecamatan") ?>">
-                     <i class="fa fa-folder"></i> Usulan Diajukan
+                     <i class="fa fa-folder"></i> Usulan Diterima
                    </a>
                  </li>
                  <li>
