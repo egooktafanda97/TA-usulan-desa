@@ -33,6 +33,7 @@
                         <th>No</th>
                         <th>Nik</th>
                         <th>Nama</th>
+                        <th>No Telepon</th>
                         <th>Alamat</th>
                         <th>Dusun</th>
                         <th>RT/RW</th>
@@ -47,6 +48,7 @@
                             <td><?= $i++ ?></td>
                             <td><?= $value['nik'] ?></td>
                             <td><?= $value['nama_pengusul'] ?></td>
+                            <td><?= $value['no_telp'] ?></td>
                             <td><?= $value['alamat_lengap'] ?></td>
                             <td><?= $value['dusun'] ?></td>
                             <td><?= $value['rt_rw'] ?></td>
