@@ -5,7 +5,8 @@
         border-radius: 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     }
-    .img-card{
+
+    .img-card {
         width: 100%;
         border-radius: 5px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -27,6 +28,15 @@
 
 <div class="continers-main">
     <div class="img-card">
-        <img src="<?=base_url("assets/img/header.jpg")?>" width="100%">
+        <!-- <img src="<?= base_url("assets/img/header.jpg") ?>" width="100%"> -->
+        <div class="cards bg-white">
+            <div class="card" style="padding-left: 20px; padding-bottom: 20px;">
+                <h2>PRIORITAS</h2>
+                <hr>
+            </div>
+            <div>
+                <canvas id="myChart" height="100"></canvas>
+            </div>
+        </div>
     </div>
 </div>

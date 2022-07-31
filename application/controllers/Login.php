@@ -85,6 +85,7 @@ class Login extends CI_Controller
             "kode_desa" => $data['desa'],
             "nik" => $data['nik'],
             "nama_pengusul" => $data['nama_pengusul'],
+            "no_telp" => $data['no_telp'],
             "dusun" => $data['dusun'],
             "rt_rw" => $data['rt_rw'],
             "tgl_lahir" => $data['tgl_lahir'],

@@ -45,7 +45,7 @@
                                 <label> Nik</label>
                                 <label style="color: red;"> *</label><br>
                                 <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
-                                <input type="text" name="nik" class="form-control form-control-sm" required>
+                                <input type="text" name="nik" maxlength="16" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -54,6 +54,14 @@
                                 <label style="color: red;"> *</label><br>
                                 <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="nama_pengusul" class="form-control form-control-sm" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="username-field"> No Telepon</label>
+                                <label style="color: red;"> *</label><br>
+                                <i style="font-size: .6em; color: green; margin: 0;padding: 0;">format nomor harus diawalai dengan +62</i>
+                                <input id="PhoneNumber" type="tel" name="no_telp" class="form-control form-control-sm" required>
                             </div>
                         </div>
                         <div class="col-md-6">

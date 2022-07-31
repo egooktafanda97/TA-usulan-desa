@@ -366,4 +366,32 @@ function hari_indonesia($tanggalInp)
 	return $hari_indonesia[$hari];
 	// Tanggal 2017-01-31 adalah hari Senin
 }
+
+function curl_request($url, $data = null)
+{
+	$url = "https://sendtalk-api.taptalk.io/api/v1/message/send_whatsapp";
+
+	$curl = curl_init($url);
+	curl_setopt($curl, CURLOPT_URL, $url);
+	curl_setopt($curl, CURLOPT_POST, true);
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+	$headers = array(
+		"API-Key: 3e19ab9503ad7c165872113b50cf0012b99f86ad4558aa1872ff8d881f39452f",
+		"Content-Type: application/json",
+	);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+
+	//for debug only!
+	curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+	curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+	$resp = curl_exec($curl);
+	$statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+	curl_close($curl);
+
+	return  ["result" => json_decode($resp, true), "status" => json_decode($statusCode, true)];
+}
 // ---------------------------------------

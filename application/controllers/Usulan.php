@@ -482,6 +482,10 @@ class Usulan extends CI_Controller
         // save usulan_desa
         $ins = $this->db->insert("usulan_desa", $d);
         if ($ins) {
+            // //////////////////////////
+            $id_user = $this->db->get_where("masyarakat_pengusul", ["id_pengusul" => $dataInp['id_masyarakat']])->row_array();
+            $this->sendWa($id_user["id_user"], "Usulan Desa Anda Telah Diterima Pihak Desa");
+            // //////////////////////////
             $this->session->set_flashdata("success", "Usulan berhasil diterima");
             redirect("Usulan/usulan_masyarakat");
         } else {
@@ -530,6 +534,10 @@ class Usulan extends CI_Controller
         $this->db->where("id_usulan_masyarakat", $id);
         $up = $this->db->update("usulan_masyarakat", ["status" => "ditolak"]);
         if ($up) {
+            // //////////////////////////
+            $id_user = $this->db->get_where("masyarakat_pengusul", ["id_pengusul" => $id])->row_array();
+            $this->sendWa($id_user["id_user"], "Usulan Desa Anda Telah Diterima Pihak Desa");
+            // //////////////////////////
             $this->session->set_flashdata("success", "Usulan berhasil ditolak");
             redirect("Usulan/usulan_masyarakat");
         } else {
@@ -653,6 +661,19 @@ class Usulan extends CI_Controller
             $this->session->set_flashdata("error", "Usulan Desa Gagal Dihapus");
             redirect("Usulan/UsulanDesaDiTolak");
         }
+    }
+
+    public function sendWa($id_user, $msg)
+    {
+        $req = curl_request(
+            "https://sendtalk-api.taptalk.io/api/v1/message/send_whatsapp",
+            [
+                "phone"       => $this->db->get_where("masyarakat_pengusul", ["id_user" => $id_user])->row_array()['no_telp'],
+                "messageType" => "text",
+                "body"        => $msg
+            ]
+        );
+        return $req;
     }
 
     // public function usulan_masyarakat_diproses()

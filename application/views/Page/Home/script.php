@@ -53,6 +53,7 @@
 <!-- include summernote css/js -->
 <script src="https://cdn.jsdelivr.net/npm/bs4-summernote@0.8.10/dist/summernote-bs4.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlLww7KS4MQk5IiMmLbBUzbw5ddio12w4&callback=initialize"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <?php if (!empty($this->session->flashdata("success"))) : ?>
     <script>
         swal({
@@ -73,3 +74,37 @@
         });
     </script>
 <?php endif ?>
+
+<script>
+    const ctxReq = async (response) => {
+        const getter = await axios.get("<?= base_url("Admin/Counting") ?>").catch(() => {
+            console.log("ok");
+        });
+        if (getter?.status ?? 400 == 200) {
+            response(getter.data);
+        }
+    }
+    ctxReq((data) => {
+        let lab = Object.keys(data);
+        const config = {
+            type: 'line',
+            data: {
+                labels: lab,
+                datasets: [{
+                    label: 'Prioritas yang diajukan',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: Object.values(data),
+                }]
+            },
+            options: {
+
+            },
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    });
+</script>

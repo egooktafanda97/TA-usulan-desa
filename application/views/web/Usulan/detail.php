@@ -134,9 +134,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Usulan Anda</a>
                     </li>
-                    <li class="nav-item ml-0 ml-lg-4">
-                        <a class="nav-link btn btn-primary" href="<?= base_url("welcome/login/") ?>">Login</a>
-                    </li>
+                    <?php if (!empty($this->session->userdata()['user']) && $this->session->userdata()['user']->role == "MASYARAKAT") : ?>
+                        <li class="nav-item ml-0 ml-lg-4">
+                            <a class="nav-link btn btn-primary" href="<?= base_url("welcome/logout/") ?>">logout</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item ml-0 ml-lg-4">
+                            <a class="nav-link btn btn-primary" href="<?= base_url("welcome/login/") ?>">Login</a>
+                        </li>
+                    <?php endif ?>
                 </ul>
             </div>
         </div>

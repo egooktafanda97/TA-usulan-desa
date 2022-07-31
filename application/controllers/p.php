@@ -177,6 +177,7 @@ class p extends CI_Controller
     {
         $this->db->where("id_user", $id_user);
         $this->db->update("user", ["status" => "active"]);
+        $this->sendWa($id_user);
         $this->session->set_flashdata("success", "Data berhasil diubah");
         redirect(base_url("MUser/user_masyarakat"));
     }
@@ -201,5 +202,17 @@ class p extends CI_Controller
         $this->db->delete("user", ["id_user" => $id_user]);
         $this->session->set_flashdata("success", "Data berhasil dihapus");
         redirect(base_url("MUser/user_masyarakat"));
+    }
+
+    public function sendWa($id_user)
+    {
+        $req = curl_request(
+            "https://sendtalk-api.taptalk.io/api/v1/message/send_whatsapp",
+            [
+                "phone"       => $this->db->get_where("masyarakat_pengusul", ["id_user" => $id_user])->row_array()['no_telp'],
+                "messageType" => "text",
+                "body"        => "Selamat, anda telah terverifikasi sebagai masyarakat pengusul. Silahkan login."
+            ]
+        );
     }
 }
