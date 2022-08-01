@@ -675,6 +675,18 @@ class Usulan extends CI_Controller
         );
         return $req;
     }
+    public function Test()
+    {
+        $req = curl_request(
+            "https://sendtalk-api.taptalk.io/api/v1/message/send_whatsapp",
+            [
+                "phone"       => "+6282284733404",
+                "messageType" => "text",
+                "body"        => "tets"
+            ]
+        );
+        var_dump($req);
+    }
 
     // public function usulan_masyarakat_diproses()
     // {

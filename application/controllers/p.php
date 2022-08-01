@@ -177,7 +177,7 @@ class p extends CI_Controller
     {
         $this->db->where("id_user", $id_user);
         $this->db->update("user", ["status" => "active"]);
-        $this->sendWa($id_user);
+        $r = $this->sendWa($id_user);
         $this->session->set_flashdata("success", "Data berhasil diubah");
         redirect(base_url("MUser/user_masyarakat"));
     }
@@ -214,5 +214,6 @@ class p extends CI_Controller
                 "body"        => "Selamat, anda telah terverifikasi sebagai masyarakat pengusul. Silahkan login."
             ]
         );
+        return $req;
     }
 }

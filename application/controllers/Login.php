@@ -101,4 +101,13 @@ class Login extends CI_Controller
             redirect(base_url("Welcome/regis"));
         }
     }
+    public function cekNIK($nik)
+    {
+        $cek = $this->db->get_where("masyarakat_pengusul", ["nik" => $nik])->num_rows();
+        if ($cek > 0) {
+            echo "1";
+        } else {
+            echo "0";
+        }
+    }
 }

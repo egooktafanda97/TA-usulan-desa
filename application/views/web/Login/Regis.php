@@ -46,6 +46,7 @@
                                 <label style="color: red;"> *</label><br>
                                 <i style="font-size: .6em; color: green; margin: 0;padding: 0;">wajib diisi</i>
                                 <input type="text" name="nik" maxlength="16" class="form-control form-control-sm" required>
+                                <span id="msgNik" style="font-size: .8; color: red;"></span>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -180,6 +181,36 @@
                     opt += `<option value="${mp.kode_desa}">${mp.nama_desa}</option>`;
                 });
                 $("[name='desa']").html(opt);
+            });
+        });
+
+        $(document).ready(function() {
+            $(':input[type="submit"]').prop('disabled', true);
+
+            $("[name='nik']").keyup(function() {
+                // cek length nik
+                if ($(this).val().length == 16) {
+                    // cek nik
+                    axios.get('<?= base_url("login/cekNIK/") ?>' + $(this).val()).then(function(response) {
+                        console.log(response.data);
+                        if (response.data == 0) {
+                            $(':input[type="submit"]').prop('disabled', false);
+                            $("[name='nik']").css("border", "1px solid green");
+                            $("#msgNik").html("");
+                        } else {
+                            $(':input[type="submit"]').prop('disabled', true);
+                            $("[name='nik']").css("border", "1px solid red");
+                            $("#msgNik").html("nik sudah terdaftar");
+                        }
+                    });
+                } else {
+                    $(':input[type="submit"]').prop('disabled', true);
+                    $("[name='nik']").css("border", "1px solid red");
+                    $("#msgNik").html("");
+                }
+                // if ($(this).val() != '') {
+                //     $(':input[type="submit"]').prop('disabled', false);
+                // }
             });
         });
     </script>
