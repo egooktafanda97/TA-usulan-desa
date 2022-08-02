@@ -38,9 +38,9 @@ class Admin extends CI_Controller
         $counting = [];
         foreach ($data as $value) {
             if ($this->session->userdata()['user']->role == "DESA") {
-                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value, "kode_desa" => $this->getUserLogin()['kode_desa'], "status" => "proses"])->num_rows();
+                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value, "kode_desa" => $this->getUserLogin()['kode_desa']])->num_rows();
             } else if ($this->session->userdata()['user']->role == "KECAMATAN") {
-                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value,  "status" => "proses"])->num_rows();
+                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value])->num_rows();
             }
         }
 
