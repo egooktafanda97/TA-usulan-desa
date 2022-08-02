@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="username-field">Whatsapp</label>
+                                <label for="username-field">No handphone (whatsapp)</label>
                                 <label style="color: red;"> *</label><br>
                                 <i style="font-size: .6em; color: green; margin: 0;padding: 0;">format nomor harus diawalai dengan +62</i>
                                 <input id="PhoneNumber" type="tel" name="no_telp" class="form-control form-control-sm" required>
