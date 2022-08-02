@@ -59,7 +59,7 @@ class Welcome extends CI_Controller
 			$getM = $this->db->get_where("masyarakat_pengusul")->row_array();
 
 			// check usulan_masyarakat
-			$getUsulan = $this->db->get_where("usulan_masyarakat", ["id_masyarakat" => $getM['id_pengusul']])->row_array();
+			$getUsulan = $this->db->get_where("usulan_masyarakat", ["id_masyarakat" => $getM['id_pengusul'], "prioritas" => $data['prioritas']])->row_array();
 			if ($getUsulan) {
 				$this->session->set_flashdata("error", "Anda sudah mengajukan usulan");
 				redirect(base_url("welcome/usulan"));
