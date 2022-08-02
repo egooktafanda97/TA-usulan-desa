@@ -98,7 +98,15 @@
                 }]
             },
             options: {
-
+                scales: {
+                    y: {
+                        min: 0,
+                        ticks: {
+                            stepSize: 0.5,
+                            precision: 0
+                        }
+                    }
+                }
             },
         };
 
