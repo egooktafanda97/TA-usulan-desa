@@ -41,8 +41,7 @@
             <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;border-bottom: 2px solid gray;">
                 <h4>Usulan Yang Belum DiKirim</h4>
                 <div><button type="button" class="btn btn-info btn-send-kec" data-toggle="modal" data-target=".usulan-created"></i> Buat Usulan</button>
-                    <!-- <button type="button" class="btn btn-primary btn-send-kec" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-download"></i> Buat Laporan</button> -->
-                    <button type="button" class="btn btn-primary download-rep"><i class="fa fa-download"></i> Buat Laporan</button>
+                    <button type="button" class="btn btn-primary btn-send-kec" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-paper-plane"></i> Kirim Ke Kecamatan</button>
                 </div>
             </div>
             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
@@ -69,7 +68,7 @@
                     foreach ($usulan as  $value) : ?>
                         <tr>
                             <th></th>
-                            <td> <input type="checkbox" class="checks" checked data-id="<?= $value['id_usulan'] ?>"></td>
+                            <td> <input type="checkbox" class="checks" data-id="<?= $value['id_usulan'] ?>"></td>
                             <td><?= $i++ ?></td>
                             <td><?= tgl_i($value['tanggal']) ?></td>
                             <td><?= $value['prioritas'] ?></td>

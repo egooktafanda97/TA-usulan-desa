@@ -63,6 +63,8 @@ class Usulan extends CI_Controller
     public function usulan_desa()
     {
         $this->db->select("*, usulan_desa.status as status_kirim");
+        // $this->db->join("masyarakat_pengusul", "masyarakat_pengusul.id_pengusul = usulan_desa.id_pengusul");
+        // $this->db->join("user", "user.id_user = masyarakat_pengusul.id_user");
         $this->db->join("desa", "desa.kode_desa = usulan_desa.kode_desa");
         $this->db->where("usulan_desa.status", "proses");
         $this->db->where("desa.id_user", $this->session->userdata()['user']->id_user);
@@ -74,19 +76,6 @@ class Usulan extends CI_Controller
             "usulan" => $u
         ];
         $this->load->view('Router/route', $data);
-    }
-    public function cetakUsulanDesaDown()
-    {
-        $this->db->select("*, usulan_desa.status as status_kirim");
-        $this->db->join("desa", "desa.kode_desa = usulan_desa.kode_desa");
-        $this->db->where("usulan_desa.status", "proses");
-        $this->db->where("desa.id_user", $this->session->userdata()['user']->id_user);
-        $u = $this->db->get('usulan_desa')->result_array();
-        $data = [
-            "usulan" => $u,
-            "user" => $this->getUserLogin()
-        ];
-        $this->load->view('Page/UsulanDesa/print', $data);
     }
     public function UsulanDesaDiTolak()
     {
@@ -621,7 +610,6 @@ class Usulan extends CI_Controller
             redirect("Usulan/usulan_desa");
         }
     }
-
     public function sendKec()
     {
         $req = $_POST;

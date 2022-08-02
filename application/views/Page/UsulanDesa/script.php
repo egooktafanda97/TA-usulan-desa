@@ -98,6 +98,9 @@
     $("#check-all").click(function() {
         $('.checks').not(this).prop('checked', this.checked);
     });
+    $(".btn-send-kec").click(function() {
+
+    });
     $(function() {
         $(document).ready(function() {
             $('.summernote').summernote({
@@ -228,19 +231,6 @@
         for (const item in vars) {
             $("[name='" + item + "']").val(vars[item]);
         }
-    })
-    $(".download-rep").click(function() {
-        swal({
-                title: "Download Laporan?",
-                text: "Laporan setelah di download akan diverifikasi",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            })
-            .then((willDelete) => {
-                if (willDelete) {
 
-                }
-            });
-    });
+    })
 </script>
