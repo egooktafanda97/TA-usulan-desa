@@ -377,7 +377,7 @@ function curl_request($url, $data = null)
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 	$headers = array(
-		"API-Key: 3e19ab9503ad7c165872113b50cf0012b99f86ad4558aa1872ff8d881f39452f",
+		"API-Key: 23a4c4918e786bffc54e91c20c2244f65624ffe3454cefac673faaa84181e293",
 		"Content-Type: application/json",
 	);
 	curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);

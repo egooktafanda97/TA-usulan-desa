@@ -60,8 +60,7 @@ class Welcome extends CI_Controller
 
 			// check usulan_masyarakat
 			$this->db->join("usulan_masyarakat", "usulan_masyarakat.id_masyarakat_pengusul = masyarakat_pengusul.id_masyarakat_pengusul");
-			$this->db->where("masyarakat_pengusul.id_masyarakat_pengusul", $getM['id_masyarakat_pengusul']);
-			$this->db->where("usulan_masyarakat.status", "active");
+			$this->db->where("masyarakat_pengusul.id_masyarakat_pengusul", $getM['id_pengusul']);
 			$getUsulan = $this->db->get_where("masyarakat_pengusul")->row_array();
 			if ($getUsulan) {
 				$this->session->set_flashdata("error", "Anda sudah mengajukan usulan");
