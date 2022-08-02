@@ -37,7 +37,11 @@ class Admin extends CI_Controller
         // count  by data 
         $counting = [];
         foreach ($data as $value) {
-            $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value, "kode_desa" => $this->getUserLogin()['kode_desa'], "status" => "proses"])->num_rows();
+            if ($this->session->userdata()['user']->role == "DESA") {
+                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value, "kode_desa" => $this->getUserLogin()['kode_desa'], "status" => "proses"])->num_rows();
+            } else if ($this->session->userdata()['user']->role == "KECAMATAN") {
+                $counting[$value] = $this->db->get_where("usulan_masyarakat", ["prioritas" => $value,  "status" => "proses"])->num_rows();
+            }
         }
 
         echo json_encode($counting);
